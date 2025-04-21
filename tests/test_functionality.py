@@ -1,11 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-from Sprint_5.data import Credentials
-from Sprint_5.helper import generate_registration_data
 from Sprint_5.locators import Locators
-from Sprint_5.curl import *
-from faker import Faker
 from Sprint_5.curl import main_site
 
 
