@@ -23,7 +23,3 @@ def login(driver):
     driver.find_element(*Locators.REGISTER_BUTTON).click()
 
     return driver
-
-@pytest.fixture(scope="module")
-def fake_data():
-    return Faker("ru_RU")

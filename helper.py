@@ -1,7 +1,7 @@
 import random
 from faker import Faker
 
-faker = Faker()
+faker = Faker('ru_RU')
 
 def generate_registration_data():
     name = faker.first_name()

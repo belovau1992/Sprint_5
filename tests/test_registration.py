@@ -5,7 +5,7 @@ from Sprint_5.data import Credentials
 from Sprint_5.helper import generate_registration_data
 from Sprint_5.locators import Locators
 
-from Sprint_5.curl import main_site
+from Sprint_5.curl import main_site, account_profile
 
 
 class TestRegistrationWithNewCredentials:
@@ -21,7 +21,7 @@ class TestRegistrationWithNewCredentials:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.HEADER_TITLE))
         #assert
-        assert driver.current_url == main_site + '/account/profile'
+        assert driver.current_url == account_profile
 
     def test_registration_invalid_password(self, driver):
         #arrange
@@ -34,5 +34,5 @@ class TestRegistrationWithNewCredentials:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.HEADER_TITLE))
         #assert
-        assert driver.current_url != main_site + 'account/profile'
+        assert driver.current_url != account_profile
 
